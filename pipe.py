@@ -56,7 +56,7 @@ def process(share_url, id):
 df = pd.read_csv('game_1k.csv')
 
 # 遍历每一行，获取“视频id”和“视频连接”
-for index, row in tqdm(df[63:].iterrows()):
+for index, row in tqdm(df[500:].iterrows()):
     video_id = row['视频id']
     video_url = row['视频链接']
     
