@@ -66,6 +66,10 @@ for index, row in tqdm(df[500:].iterrows()):
     # mp4 file
     filename = f"videos/{video_id}.mp4"
 
+    if os.path.exists(filename):
+        # print(f"文件已存在: {filename}")
+        continue
+
     # add try except
     # if failed, try 3 times
     try:
